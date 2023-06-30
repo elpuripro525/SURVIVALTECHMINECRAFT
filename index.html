@@ -6,59 +6,181 @@
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      margin-top: 50px;
-      background-color: #121212;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(#1c1c1c, #121212);
       color: #ffffff;
     }
 
-    h1 {
-      font-size: 36px;
-      margin-bottom: 30px;
+    .main-container {
+      margin-top: 1px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 100px;
     }
 
-    h2 {
-      font-size: 24px;
-      margin-top: 50px;
+    .main-container h1 {
+      font-size: 45px;
+      margin-bottom: 1px;
+      color: #FFC107;
     }
 
-    p {
-      margin: 20px 0;
+    .main-container h2 {
+      font-size: 40px;
+      margin-top: 1px;
+      color: #FFC107;
     }
 
-    .button {
+    .main-container p {
+      margin: 1px 0;
+      font-size: 30px;
+    }
+
+    .main-container .button {
       display: inline-block;
       background-color: #4CAF50;
       color: white;
-      padding: 10px 20px;
+      padding: 20px 30px;
       text-align: center;
       text-decoration: none;
-      font-size: 18px;
-      margin: 10px;
+      font-size: 20px;
+      margin: 25px;
       cursor: pointer;
-      border-radius: 4px;
+      border-radius: 1px;
     }
 
-    .button:hover {
+    .main-container .button:hover {
       background-color: #45a049;
     }
+
+    .menu-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .menu-container h2 {
+      font-size: 30px;
+      margin-top: 10px;
+      color: #FFC107;
+    }
+
+    .menu-container p {
+      margin: 40px 0;
+    }
+
+    .menu-container .button {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 24px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 20px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 40px;
+      border: none;
+    }
+
+    .menu-container .button:hover {
+      background-color: #45a049;
+    }
+
+    .info-container {
+      margin-top: 20px;
+      display: none;
+      color: #FFC107;
+    }
+
+    .info-container p {
+      font-size: 40px;
+      margin: 10px;
+    }
+
   </style>
 </head>
 <body>
-  <h1>Bienvenido al servidor SurvivalTechMc.</h1>
-  <h2> A continuación se proporcionan enlaces de descarga de mods para poder entrar al servidor y jugar correctamente.
-  <h2>Recursos:</h2>
-  <p>Descargar Fabric 1.19.2:</p>
-  <a class="button" href="https://fabricmc.net/use/installer/" target="_blank">Descargar</a>
-
-  <p>Descargar mods necesarios (Pack de mods completo):</p>
-  <p>Si no tienes minecraft comprado, elimina el mod Essential.</p>
-  <a class="button" href="https://www.mediafire.com/file/xh5rdreigmmv9sd/Mods_Actualizados_29_Junio..zip/file" target="_blank">Descargar</a>
-
-  <p>Descargar pack de mods necesarios (Pack de mods reducido, si tienes pc mala):</p>
-  <a class="button" href="https://www.mediafire.com/file/boolxs2mbl731ua/Mods_reducidos_Survival_T%25C3%25A9cnico..zip/file" target="_blank">Descargar</a>
-
+  <div class="main-container">
+    <h1>Bienvenido al servidor SurvivalTechMC</h1>
+    <h2>Recursos:</h2>
   
-  <p>Descargar Texture Pack buenardo hecho por mí: </p>
-  <a class="button" href="https://www.mediafire.com/file/nu64e8xysu5a283/Puri_Pack.rar/file" target="_blank">Descargar</a>
+    <div>
+      <h2>Fabric.</h2>
+      <p> Descarga la ultima versión de fabric 1.19.2 </p>
+      <a class="button" href="https://fabricmc.net/use/installer/" target="_blank">Descargar</a>
+    </div>
+
+    <div>
+      <h2>Mods.</h2>
+      <a class="button" href="#" onclick="showMenu()">Descargar</a>
+    </div>
+
+    <div>
+      <h2>Texture Pack.</h2>
+      <p> Opcional pero muy bueno, mi texture pack. </p>
+      <a class="button" href="https://www.mediafire.com/file/nu64e8xysu5a283/Puri_Pack.rar/file" target="_blank">Descargar</a>
+    </div>
+  </div>
+
+  <div id="menu-container" class="menu-container" style="display: none;">
+    <h2>Menú de Mods. Elige uno según tu preferencia.</h2>
+    <div>
+      <h2>Pack de Mods Completo.</h2>
+      <button class="button" onclick="showInfo('info1')">Información</button>
+      <a class="button" href="https://www.mediafire.com/file/k8oycjg0ttcr3uc/Pack_de_mods_FULL..zip/file" target="_blank">Descargar</a>
+    </div>
+    <div>
+      <h2>Pack de Mods Optimizado Mejorado.</h2>
+      <button class="button" onclick="showInfo('info2')">Información</button>
+      <a class="button" href="https://www.mediafire.com/file/yuw5xwenou7185i/Pack_de_mods_full_--.zip/file" target="_blank">Descargar</a>
+    </div>
+    <div>
+      <h2>Pack de Mods Optimizado.</h2>
+      <button class="button" onclick="showInfo('info3')">Información</button>
+      <a class="button" href="https://www.mediafire.com/file/ryr3odw4nxdkiv6/Pack_de_mods_necesario_simple_optimizado.zip/file" target="_blank">Descargar</a>
+    </div>
+    <div>
+      <h2>Pack de Mods Necesario.</h2>
+      <button class="button" onclick="showInfo('info4')">Información</button>
+      <a class="button" href="https://www.mediafire.com/file/z82wve1n8mnbkhu/Pack_de_mods_requeridos_simple.zip/file" target="_blank">Descargar</a>
+    </div>
+
+    <div id="info-container" class="info-container"></div>
+  </div>
+
+  <script>
+    function showMenu() {
+      var menuContainer = document.getElementById("menu-container");
+      menuContainer.style.display = "flex";
+    }
+
+    function showInfo(info) {
+      var infoContainer = document.getElementById("info-container");
+      var infoText = "";
+
+      if (info === "info1") {
+        infoText = "Este pack de mods contiene: los mods esenciales para unirte al servidor, otros mods técnicos y otros mods utiles. Son 142 mods. ";
+      } else if (info === "info2") {
+        infoText = "Este pack de mods contiene: los mods esenciales para unirte al servidor, mods de optimización para mejorar tu rendimiento y otros mods técnicos. Recomendado si no te gusta tener muchas opciones pero si las esenciales para jugar. Contiene tweakeroo, minihud, shulker box tooltip... Son 61 mods.";
+      } else if (info === "info3") {
+        infoText = "Este pack de mods contiene: los mods esenciales para unirte al servidor y mods de optimización para mejorar tu rendimiento. Recomendado únicamente si tienes una pc mala. Contiene litematica, journeymap. Son 36 mods. ";
+      } else if (info === "info4") {
+        infoText = "Este pack de mods contiene únicamente los mods requeridos para entrar al servidor. No recomendado para nada. Son 12 mods. ";
+      }
+
+      infoContainer.innerHTML = "<p>" + infoText + "</p>";
+      infoContainer.style.display = "block";
+    }
+  </script>
 </body>
 </html>
