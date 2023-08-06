@@ -113,74 +113,15 @@
   <div class="main-container">
     <h1>Bienvenido al servidor SurvivalTechMC</h1>
     <h2>Recursos:</h2>
-  
     <div>
       <h2>Fabric.</h2>
-      <p> Descarga la ultima versión de fabric 1.19.2 </p>
+      <p> Descarga la ultima versión de fabric 1.20.1 </p>
       <a class="button" href="https://fabricmc.net/use/installer/" target="_blank">Descargar</a>
     </div>
-
     <div>
-      <h2>Mods.</h2>
-      <a class="button" href="#" onclick="showMenu()">Descargar</a>
+      <h2>Fabric.</h2>
+      <p> Pack de mods necesarios. (Contiene TODO: mods útiles, optimización, jugabilidad... </p>
+      <a class="button" href="https://www.mediafire.com/file/zpuc2ko21b6xzny/SurvivalTechMC_MODS_Fabric_1.20.1.zip/file" target="_blank">Descargar</a>
     </div>
-
-    <div>
-      <h2>Texture Pack.</h2>
-      <p> Opcional pero muy bueno, mi texture pack. </p>
-      <a class="button" href="https://www.mediafire.com/file/nu64e8xysu5a283/Puri_Pack.rar/file" target="_blank">Descargar</a>
-    </div>
-  </div>
-
-  <div id="menu-container" class="menu-container" style="display: none;">
-    <h2>Menú de Mods. Elige uno según tu preferencia.</h2>
-    <div>
-      <h2>Pack de Mods Completo.</h2>
-      <button class="button" onclick="showInfo('info1')">Información</button>
-      <a class="button" href="https://www.mediafire.com/file/k8oycjg0ttcr3uc/Pack_de_mods_FULL..zip/file" target="_blank">Descargar</a>
-    </div>
-    <div>
-      <h2>Pack de Mods Optimizado Mejorado.</h2>
-      <button class="button" onclick="showInfo('info2')">Información</button>
-      <a class="button" href="https://www.mediafire.com/file/yuw5xwenou7185i/Pack_de_mods_full_--.zip/file" target="_blank">Descargar</a>
-    </div>
-    <div>
-      <h2>Pack de Mods Optimizado.</h2>
-      <button class="button" onclick="showInfo('info3')">Información</button>
-      <a class="button" href="https://www.mediafire.com/file/ryr3odw4nxdkiv6/Pack_de_mods_necesario_simple_optimizado.zip/file" target="_blank">Descargar</a>
-    </div>
-    <div>
-      <h2>Pack de Mods Necesario.</h2>
-      <button class="button" onclick="showInfo('info4')">Información</button>
-      <a class="button" href="https://www.mediafire.com/file/z82wve1n8mnbkhu/Pack_de_mods_requeridos_simple.zip/file" target="_blank">Descargar</a>
-    </div>
-
-    <div id="info-container" class="info-container"></div>
-  </div>
-
-  <script>
-    function showMenu() {
-      var menuContainer = document.getElementById("menu-container");
-      menuContainer.style.display = "flex";
-    }
-
-    function showInfo(info) {
-      var infoContainer = document.getElementById("info-container");
-      var infoText = "";
-
-      if (info === "info1") {
-        infoText = "Este pack de mods contiene: los mods esenciales para unirte al servidor, otros mods técnicos y otros mods utiles. Son 142 mods. ";
-      } else if (info === "info2") {
-        infoText = "Este pack de mods contiene: los mods esenciales para unirte al servidor, mods de optimización para mejorar tu rendimiento y otros mods técnicos. Recomendado si no te gusta tener muchas opciones pero si las esenciales para jugar. Contiene tweakeroo, minihud, shulker box tooltip... Son 61 mods.";
-      } else if (info === "info3") {
-        infoText = "Este pack de mods contiene: los mods esenciales para unirte al servidor y mods de optimización para mejorar tu rendimiento. Recomendado únicamente si tienes una pc mala. Contiene litematica, journeymap. Son 36 mods. ";
-      } else if (info === "info4") {
-        infoText = "Este pack de mods contiene únicamente los mods requeridos para entrar al servidor. No recomendado para nada. Son 12 mods. ";
-      }
-
-      infoContainer.innerHTML = "<p>" + infoText + "</p>";
-      infoContainer.style.display = "block";
-    }
-  </script>
 </body>
 </html>
