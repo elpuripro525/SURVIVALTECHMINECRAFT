@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>SurvivalTechMC - Página Web</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Bienvenido a la página web de SurvivalTechMC</h2>
+        <h2>Nombre del jugador: <span id="playerName"></span></h2>
+        <!-- Contenido adicional de la página aquí -->
+    </div>
+  <button class="large-button" onclick="window.location.href = 'form.html';">Acceder al formulario.</button>
+    <script>
+        // Obtener el nombre del jugador de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const playerName = urlParams.get('player');
+
+        // Mostrar el nombre del jugador en la página
+        const playerNameElement = document.getElementById('playerName');
+        if (playerName) {
+            playerNameElement.textContent = playerName;
+        }
+    </script>
+</body>
+</html>
